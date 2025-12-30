@@ -1,4 +1,3 @@
-// trigger to play music in the background with sweetalert
 window.addEventListener("load", () => {
   Swal.fire({
     title: "Do you want to play music in the background?",
@@ -13,65 +12,11 @@ window.addEventListener("load", () => {
       document.querySelector(".song").play();
       animationTimeline();
     } else {
-      animationTimeline();
+  animationTimeline();
     }
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const dayElement = document.getElementById("day");
-  const monthElement = document.getElementById("month");
-  const yearElement = document.getElementById("year");
-  const ageElement = document.getElementById("age");
-
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  const targetDay = 7;
-  const targetMonthIndex = 11; // December
-  const targetYear = 2024;
-  const birthYear = 2001;
-
-  let currentDay = 1;
-  let currentMonthIndex = 0;
-  let currentYear = birthYear;
-  let currentAge = 0;
-
-  const interval = setInterval(() => {
-    // Update day, month, year, and age in the DOM
-    dayElement.textContent = currentDay;
-    monthElement.textContent = months[currentMonthIndex];
-    yearElement.textContent = currentYear;
-    ageElement.textContent = currentAge;
-
-    // Smoothly increment day, month, year, and age
-    if (currentDay < targetDay) {
-      currentDay++;
-    } else if (currentMonthIndex < targetMonthIndex) {
-      currentDay = targetDay; // Fix day
-      currentMonthIndex++;
-    } else if (currentYear < targetYear) {
-      currentMonthIndex = targetMonthIndex; // Fix month
-      currentYear++;
-      currentAge++;
-    } else {
-      // Stop animation when target is reached
-      clearInterval(interval);
-    }
-  }, 250); // Smoother speed adjustment
-});
 
 // animation timeline
 const animationTimeline = () => {
@@ -166,7 +111,7 @@ const animationTimeline = () => {
       ".fake-btn",
       0.1,
       {
-        backgroundColor: "rgb(127, 206, 248)",
+        backgroundColor: "rgba(148, 95, 188, 1)",
       },
       "+=4"
     )
@@ -188,7 +133,7 @@ const animationTimeline = () => {
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
       x: 10,
-      backgroundColor: "rgb(21, 161, 237)",
+      backgroundColor: "rgba(148, 95, 188, 1)",
       color: "#fff",
     })
     .to(".idea-3", 0.7, ideaTextTransLeave, "+=2.5")
@@ -302,7 +247,7 @@ const animationTimeline = () => {
       {
         scale: 1,
         rotationY: 0,
-        color: "#ff69b4",
+        color: "#6b30a7ff",
         ease: Expo.easeOut,
       },
       0.1,
